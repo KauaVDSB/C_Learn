@@ -20,14 +20,25 @@ void mostra_matriz(int m[][3], int x, int y) {
             }
         }
     }
+    printf("\n\n");
+
+    return;
 }
 
-int multiplica_matriz(int x1, int y1, int y2, int x2, int m1[][3], int m2[][3]) {
-    if (x1 != x2 || y1 != y2) {
+void multiplica_matriz(int m1[][3], int x1, int y1, int m2[][3], int y2, int x2, int m_res[][3]) {
+    if (x1 != y2) {
         printf("Matrizes inválidas para comparação.\n");
-        break;
+        return;
     }
 
-    for (int i = 0; )
-    
+    for (int i = 0; i < y1; i++) {
+        for (int j = 0; j < x2; j++) {
+
+            m_res[i][j] = 0;
+
+            for (int k = 0; k < x1; k++) {
+                m_res[i][j] += m1[i][k] * m2[k][j];
+            }
+        }
+    }
 }
