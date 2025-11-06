@@ -21,7 +21,7 @@ void leString(char *string, int size_string) {
 
 
 int main() {
-    user u1;
+    user u1, u2;
     int c;
     while((c = getchar()) != '\n' && c != EOF);
 
@@ -42,5 +42,9 @@ int main() {
     printf("%d\n", u1.idade);
     printf("%d\n", u1.idade);
     printf("%d\n", u1.idade);
+
+
+    /* Permite atribuição entre estruturas do mesmo tipo! */
+    u2 = u1;
     
 }
